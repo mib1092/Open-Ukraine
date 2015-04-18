@@ -18,6 +18,7 @@
         </div>
     </div>
 
+
 <?php else: ?>
 
     <section class="wrap-page-title">
