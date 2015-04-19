@@ -20,6 +20,13 @@
 
             <div class="wrap-form">
                 <div class="wrap-box">
+                    <!-- add feedback-form -->
+                    <?php
+                        $block = module_invoke('webform', 'block_view', 'client-block-38');
+                        print render($block['content']);
+                    ?>
+
+                    <!-- copyright-block -->
                     <div class="wrap-copy">
 
                         <?php $fb = token_replace('[socialmedia:sm-facebook_url]');
@@ -61,13 +68,7 @@
 
                             <p class="copyright">Powered by <a href="http://geekhub.ck.ua/" target="_blank" rel="nofollow">GeekHub</a></p>
                         </div>
-                    </div>
-
-                    <!-- add feedback-form -->
-                    <?php
-                        $block = module_invoke('webform', 'block_view', 'client-block-38');
-                        print render($block['content']);
-                    ?>
+                    </div><!--end WRAP-COPY-->
                 </div>
             </div><!--end WRAP-FORM-->
         </footer>

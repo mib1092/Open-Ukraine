@@ -51,9 +51,9 @@
             height: 8px;
             margin: 0 4px;
             border: 1px solid #AEA7A0;
-            -webkit-border-radius: 7px;
-            -moz-border-radius: 7px;
-            border-radius: 7px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
             -webkit-transition-duration: 0.2s;
             -o-transition-duration: 0.2s;
             -moz-transition-duration: 0.2s;
@@ -63,3 +63,18 @@
         .rslides_tabs .rslides_here a {
             background: #AEA7A0;
         }
+
+
+@media all and (min-width: 1680px) {
+    .rslides li {
+        max-height: 700px;
+    }
+    .rslides_tabs {
+        top: -52px;
+    }
+    .rslides_tabs a {
+        width: 9px;
+        height: 9px;
+        margin: 0 5px;
+    }
+}

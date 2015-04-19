@@ -40,7 +40,9 @@
     </section>
 
     <div class="wrap-login">
-        <?php print render($page['content']); ?>
+        <div class="wrap-box">
+            <?php print render($page['content']); ?>
+        </div>
     </div>
 
     <?php if ($confirmation) : ?>
