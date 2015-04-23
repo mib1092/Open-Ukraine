@@ -23,21 +23,18 @@
                       <?php endif; ?>
                     </h1>
 
-                    <div id="search-box">
-                        <?php
+                    <nav class="main-nav">
+                        <?php if (!empty($primary_nav)): ?>
+                            <?php print render($primary_nav); ?>
+                        <?php endif; ?>
+
+                        <div id="search-box">
+                            <?php
                             $block = module_invoke('search', 'block_view', 'form');
                             print render($block['content']);
-                        ?>
-                    </div>
-                    
-                  <nav class="main-nav">
-
-                    <?php if (!empty($primary_nav)):
-                        print render($primary_nav);
-                    endif; ?>
-
-                  </nav> 
-
+                            ?>
+                        </div>
+                    </nav>
                 </div>
             </div><!--end TOP-HEADER-->
 

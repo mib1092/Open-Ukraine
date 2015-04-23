@@ -23,20 +23,29 @@
                       <?php endif; ?>
                     </h1>
 
-                    <div id="search-box">
-                        <?php
+                    <nav class="main-nav">
+                        <?php if (!empty($primary_nav)): ?>
+                            <?php print render($primary_nav); ?>
+                        <?php endif; ?>
+
+                        <div id="search-box">
+                            <?php
                             $block = module_invoke('search', 'block_view', 'form');
                             print render($block['content']);
-                        ?>
-                    </div>
+                            ?>
+                        </div>
+                    </nav>
 
-                  <nav class="main-nav">
-
-                    <?php if (!empty($primary_nav)): ?>
-                    <?php print render($primary_nav); ?>
-                    <?php endif; ?>
-
-                  </nav>   
+<!--                    <div class="btn-menu">-->
+<!--                        <span class="btn-toggle">&#8212;</span>-->
+<!--                    </div>-->
+<!---->
+<!--                    <div class="tbl-toggle">-->
+<!--                        <ul>-->
+<!--                            <li><a href="#">1111</a></li>-->
+<!--                            <li><a href="#">2222</a></li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
 
                 </div>
             </div>

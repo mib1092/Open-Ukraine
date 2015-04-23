@@ -146,6 +146,7 @@ function open_preprocess_page(&$variables, $hook) {
     drupal_add_js(drupal_get_path('theme','open') . '/js/smoothscroll.js',
       array('type' => 'file', 'scope' => 'footer', 'weight' => 4));
     drupal_add_js(drupal_get_path('theme','open') . '/js/popup.js');
+    drupal_add_js(drupal_get_path('theme','open') . '/js/commonJs.js');
 
 
     if (drupal_is_front_page()) {
