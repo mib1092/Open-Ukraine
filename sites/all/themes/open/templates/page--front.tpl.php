@@ -23,6 +23,11 @@
                       <?php endif; ?>
                     </h1>
 
+
+                    <div class="btn-menu">
+                        <span class="btn-toggle">&#8212;</span>
+                    </div>
+
                     <nav class="main-nav">
                         <?php if (!empty($primary_nav)): ?>
                             <?php print render($primary_nav); ?>

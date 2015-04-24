@@ -145,8 +145,10 @@ function open_preprocess_page(&$variables, $hook) {
       array('type' => 'file', 'scope' => 'footer', 'weight' => 3));
     drupal_add_js(drupal_get_path('theme','open') . '/js/smoothscroll.js',
       array('type' => 'file', 'scope' => 'footer', 'weight' => 4));
-    drupal_add_js(drupal_get_path('theme','open') . '/js/popup.js');
-    drupal_add_js(drupal_get_path('theme','open') . '/js/commonJs.js');
+    drupal_add_js(drupal_get_path('theme','open') . '/js/commonJs.js',
+      array('type' => 'file', 'scope' => 'footer', 'weight' => 5));
+    drupal_add_js(drupal_get_path('theme','open') . '/js/popup.js',
+      array('type' => 'file', 'scope' => 'footer', 'weight' => 6));
 
 
     if (drupal_is_front_page()) {
