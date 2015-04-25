@@ -12,21 +12,24 @@
                   <?php endif; ?>
                 </h1>
 
-                <div id="search-box">
-                    <?php
-                        $block = module_invoke('search', 'block_view', 'form');
-                        print render($block['content']);
-                    ?>
+                <div class="btn-menu">
+                    <span class="btn-toggle">
+                        <span class="btn-toggle-line"></span>
+                    </span>
                 </div>
 
-              <nav class="main-nav">
+                <nav class="main-nav">
+                    <?php if (!empty($primary_nav)): ?>
+                        <?php print render($primary_nav); ?>
+                    <?php endif; ?>
 
-                <?php if (!empty($primary_nav)): ?>
-                    <?php print render($primary_nav); ?>
-                <?php endif; ?>
-
-              </nav>
-
+                    <div id="search-box">
+                        <?php
+                        $block = module_invoke('search', 'block_view', 'form');
+                        print render($block['content']);
+                        ?>
+                    </div>
+                </nav>
             </div>
         </div>
     </header>

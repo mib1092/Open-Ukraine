@@ -17,15 +17,14 @@
                         </a>
 
                       <?php else: /* Use h1 when the content title is empty */ ?>
-                        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
-                            LOGO
-                        </a>
+                        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">LOGO</a>
                       <?php endif; ?>
                     </h1>
 
-
                     <div class="btn-menu">
-                        <span class="btn-toggle">&#8212;</span>
+                        <span class="btn-toggle">
+                            <span class="btn-toggle-line"></span>
+                        </span>
                     </div>
 
                     <nav class="main-nav">

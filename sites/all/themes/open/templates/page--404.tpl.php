@@ -8,27 +8,28 @@
                         </a>
 
                     <?php else: /* Use h1 when the content title is empty */ ?>
-                        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
-                            LOGO
-                        </a>
+                        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">LOGO</a>
                     <?php endif; ?>
                 </h1>
 
-                <div id="search-box">
-                    <?php
-                        $block = module_invoke('search', 'block_view', 'form');
-                        print render($block['content']);
-                    ?>
+                <div class="btn-menu">
+                    <span class="btn-toggle">
+                        <span class="btn-toggle-line"></span>
+                    </span>
                 </div>
 
                 <nav class="main-nav">
-
                     <?php if (!empty($primary_nav)): ?>
                         <?php print render($primary_nav); ?>
                     <?php endif; ?>
 
+                    <div id="search-box">
+                        <?php
+                        $block = module_invoke('search', 'block_view', 'form');
+                        print render($block['content']);
+                        ?>
+                    </div>
                 </nav>
-
             </div>
         </div>
     </header>

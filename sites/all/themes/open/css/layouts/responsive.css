@@ -77,10 +77,10 @@
     height: 615px;
 }
 .wrap-box {
-    max-width: 1040px;
+    max-width: 1030px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 15px;
     box-sizing: border-box;
 }
 /*----------------------------------------------------------------------------------*/
@@ -108,6 +108,7 @@
 .front .top-header {
     position: absolute;
     top: 0;
+    height: 47px;
     background-color: rgba(34, 92, 123, 0.8);
     box-shadow: none;
 }
@@ -122,6 +123,41 @@
     font: 20px 'Montserrat', 'Open Sans', sans-serif;
     color: #FFFFFF;
 }
+
+
+.btn-menu {
+    display: none;
+    text-align: right;
+}
+.btn-toggle {
+    position: relative;
+    display: inline-block;
+    height: 19px;
+    width: 28px;
+    margin: 15px 0 8px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.btn-toggle-line,
+.btn-toggle:before,
+.btn-toggle:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    height: 3px;
+    width: 28px;
+    background: #ffffff;
+}
+.btn-toggle-line {
+    top: 8px;
+}
+.btn-toggle:before {
+    top: 0;
+}
+.btn-toggle:after {
+    bottom: 0;
+}
+
 
 .slider-header{
     position: relative;
@@ -408,7 +444,7 @@ main {
 }
 .video-box ul {
     overflow: hidden;
-    padding: 52px 20px 47px;
+    padding: 52px 15px 47px;
 }
 .video-box li {
     float: left;
@@ -1040,7 +1076,9 @@ span.about-author {
     height: 615px;
 }
     .gm-style > div:first-of-type > div:nth-child(2) {
-        box-shadow: inset 0 4px 6px -1px rgba(0,0,0,0.5);
+        -webkit-box-shadow: inset 0 4px 6px -1px rgba(0,0,0,0.5);
+        -moz-box-shadow:    inset 0 4px 6px -1px rgba(0,0,0,0.5);
+        box-shadow:         inset 0 4px 6px -1px rgba(0,0,0,0.5);
     }
 
 .wrap-form {
@@ -1327,210 +1365,106 @@ span.about-author {
 /*-----------------------------------RESPONSIVE-------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 /* Navigation bar */
-@media all and (min-width: 480px) {
-  #main {
-    /* Move all the children of #main down to make room. */
-    padding-top: 3em;
-    position: relative;
-  }
-  #navigation {
-    /* Move the navbar up inside #main's padding. */
-    position: absolute;
-    top: 0;
-    height: 3em;
-    width: 100%;
-  }
+@media screen and (max-width: 480px) {
+
 }
 
+@media screen and (max-width: 767px) {
+    .btn-menu {
+        display: block;
+    }
 
-/**
- * Use 3 grid columns for smaller screens.
- */
-@media all and (min-width: 480px) and (max-width: 959px) {
+    .main-nav {
+        display: none;
+        float: right;
+        position: absolute;
+        right: -15px;
+        width: 37%;
+        min-width: 240px;
+        padding: 15px 0;
+        margin: 0;
+        background: #225C7B;
+        -webkit-box-shadow: inset 0 4px 6px -1px rgba(0,0,0,0.5),
+                            -1px 2px 6px 0 rgba(0,0,0,0.5);
+        -moz-box-shadow:    inset 0 4px 6px -1px rgba(0,0,0,0.5),
+                            -1px 2px 6px 0 rgba(0,0,0,0.5);
+        box-shadow:         inset 0 4px 6px -1px rgba(0,0,0,0.5),
+                            -1px 2px 6px 0 rgba(0,0,0,0.5);
+    }
+    .main-nav > ul {
+        display: block;
+        margin-bottom: 0;
+    }
+    .main-nav li {
+        float: none;
+    }
+    .main-nav a {
+        padding-right: 40px;
+    }
+    .front .main-nav a.active,
+    .front .main-nav a.is-active-trail,
+    .front .main-nav li > a:hover {
+        background-color: #1D5676;
+    }
 
-  /**
-   * The layout when there is only one sidebar, the left one.
-   */
+    .main-nav .menu {
+        position: relative;
+        top: initial;
+        left: initial;
+        display: none;
+        margin: 0;
+        text-align: right;
+        box-shadow: none;
+        border-radius: 0;
+        transition: initial;
+        opacity: 1;
+        visibility: visible;
+    }
+    .main-nav .active-trail .menu,
+    .main-nav a.active + .menu {
+        background-color: #1D5676;
+    }
+    .main-nav .menu li {
+        float: none;
+        border: none;
+    }
+    .main-nav .menu a {
+        width: auto;
+        padding: 15px 38px 14px;
+        background-color: transparent;
+        color: #A5BCC9;
+    }
+    .main-nav ul.menu a:hover,
+    .main-nav ul.menu a.is-active-trail {
+        background-color: #1D5676;
+        color: #FACA3D;
+    }
 
-  /* Span 2 columns, starting in 2nd column from left. */
-  .sidebar-first #content {
-    float: left;
-    width: 66.66667%;
-    margin-left: 33.33333%;
-    margin-right: -100%;
-  }
+    #search-box {
+        margin-right: 40px;
+    }
+    #search-block-form {
+        width: 70px;
+    }
+    #search-block-form .fa-search {
+        padding-right: 43px;
+    }
+    .form-open #search-block-form .fa-search {
+        padding-right: 0;
+    }
+    #search-block-form .form-text {
+        width: 43px;
+        padding-right: 0;
+    }
+    #search-block-form .form-text::-webkit-input-placeholder  {color: #A5BCC9;}
+    #search-block-form .form-text::-moz-placeholder           {color: #A5BCC9;}
+    #search-block-form .form-text:-moz-placeholder            {color: #A5BCC9;}
+    #search-block-form .form-text:-ms-input-placeholder       {color: #A5BCC9;}
 
-  /* Span 1 column, starting in 1st column from left. */
-  .sidebar-first .region-sidebar-first {
-    float: left;
-    width: 33.33333%;
-    margin-left: 0%;
-    margin-right: -33.33333%;
-  }
 
-  /**
-   * The layout when there is only one sidebar, the right one.
-   */
-
-  /* Span 2 columns, starting in 1st column from left. */
-  .sidebar-second #content {
-    float: left;
-    width: 66.66667%;
-    margin-left: 0%;
-    margin-right: -66.66667%;
-  }
-
-  /* Span 1 column, starting in 3rd column from left. */
-  .sidebar-second .region-sidebar-second {
-    float: left;
-    width: 33.33333%;
-    margin-left: 66.66667%;
-    margin-right: -100%;
-  }
-
-  /**
-   * The layout when there are two sidebars.
-   */
-
-  /* Span 2 columns, starting in 2nd column from left. */
-  .two-sidebars #content {
-    float: left;
-    width: 66.66667%;
-    margin-left: 33.33333%;
-    margin-right: -100%;
-  }
-
-  /* Span 1 column, starting in 1st column from left. */
-  .two-sidebars .region-sidebar-first {
-    float: left;
-    width: 33.33333%;
-    margin-left: 0%;
-    margin-right: -33.33333%;
-  }
-
-  /* Start a new row and span all 3 columns. */
-  .two-sidebars .region-sidebar-second {
-    float: left;
-    width: 100%;
-    margin-left: 0%;
-    margin-right: -100%;
-    padding-left: 0;
-    padding-right: 0;
-    clear: left;
-  }
-
-  /* Apply the shared properties of grid items in a single, efficient ruleset. */
-  .two-sidebars .region-sidebar-second .block {
-    padding-left: 10px;
-    padding-right: 10px;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-    word-wrap: break-word;
-    _display: inline;
-    _overflow: hidden;
-    _overflow-y: visible;
-  }
-
-  /* Span 1 column, starting in the 1st column from left. */
-  .two-sidebars .region-sidebar-second .block:nth-child(3n+1) {
-    float: left;
-    width: 33.33333%;
-    margin-left: 0%;
-    margin-right: -33.33333%;
-    clear: left;
-  }
-
-  /* Span 1 column, starting in the 2nd column from left. */
-  .two-sidebars .region-sidebar-second .block:nth-child(3n+2) {
-    float: left;
-    width: 33.33333%;
-    margin-left: 33.33333%;
-    margin-right: -66.66667%;
-  }
-
-  /* Span 1 column, starting in the 3rd column from left. */
-  .two-sidebars .region-sidebar-second .block:nth-child(3n) {
-    float: left;
-    width: 33.33333%;
-    margin-left: 66.66667%;
-    margin-right: -100%;
-  }
-}
-
-/**
- * Use 5 grid columns for larger screens.
- */
-@media all and (min-width: 960px) {
-
-  /**
-   * The layout when there is only one sidebar, the left one.
-   */
-
-  /* Span 4 columns, starting in 2nd column from left. */
-  .sidebar-first #content {
-    float: left;
-    width: 80%;
-    margin-left: 20%;
-    margin-right: -100%;
-  }
-
-  /* Span 1 column, starting in 1st column from left. */
-  .sidebar-first .region-sidebar-first {
-    float: left;
-    width: 20%;
-    margin-left: 0%;
-    margin-right: -20%;
-  }
-
-  /**
-   * The layout when there is only one sidebar, the right one.
-   */
-
-  /* Span 4 columns, starting in 1st column from left. */
-  .sidebar-second #content {
-    float: left;
-    width: 80%;
-    margin-left: 0%;
-    margin-right: -80%;
-  }
-
-  /* Span 1 column, starting in 5th column from left. */
-  .sidebar-second .region-sidebar-second {
-    float: left;
-    width: 20%;
-    margin-left: 80%;
-    margin-right: -100%;
-  }
-
-  /**
-   * The layout when there are two sidebars.
-   */
-
-  /* Span 3 columns, starting in 2nd column from left. */
-  .two-sidebars #content {
-    float: left;
-    width: 60%;
-    margin-left: 20%;
-    margin-right: -80%;
-  }
-
-  /* Span 1 column, starting in 1st column from left. */
-  .two-sidebars .region-sidebar-first {
-    float: left;
-    width: 20%;
-    margin-left: 0%;
-    margin-right: -20%;
-  }
-
-  /* Span 1 column, starting in 5th column from left. */
-  .two-sidebars .region-sidebar-second {
-    float: left;
-    width: 20%;
-    margin-left: 80%;
-    margin-right: -100%;
-  }
+    .preheader-box .description {
+        font-size: 22px;
+    }
 }
 
 @media all and (min-width: 1680px) {
@@ -1541,42 +1475,5 @@ span.about-author {
     .slide-description h2 {
         font-size: 60px;
         line-height: 90px;
-    }
-}
-
-.btn-menu {
-    display: none;
-    text-align: right;
-}
-.btn-toggle {
-    display: inline-block;
-    color: #000;
-    line-height: 5px;
-    font-size: 19px;
-    padding: 2px 4px 5px;
-    margin: 10px 15px;
-    border: 1px solid #000;
-    cursor: pointer;
-
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-}
-.btn-toggle:after,
-.btn-toggle:before {
-    display: block;
-    content: '\2014';
-    color: #000;
-}
-
-@media screen and (max-width: 980px) {
-    .main-nav {
-        display: none;
-    }
-    .btn-menu {
-        display: block;
-    }
-    .main-nav li {
-        float: none;
     }
 }
