@@ -428,14 +428,20 @@ main {
     color: #263F4C;
 }
 .preheader-box h2 {
-    margin-bottom: 12px;
+    width: 90%;
+    margin: 0 auto 12px;
     font: 700 18px 'Montserrat', 'Open Sans', sans-serif;
     text-transform: uppercase;
     color: #334A57;
 }
 .preheader-box .description {
-    margin-bottom: 16px;
+    width: 93%;
+    margin: 0 auto 16px;
     font-size: 24px;
+}
+.preheader-box .field-item p {
+    width: 80%;
+    margin: 0 auto;
 }
 
 .video-box {
@@ -1462,8 +1468,30 @@ span.about-author {
     #search-block-form .form-text:-ms-input-placeholder       {color: #A5BCC9;}
 
 
+    .preheader-box {
+        padding: 40px 20px 80px;
+        font-size: 16px;
+        line-height: 20px;
+    }
     .preheader-box .description {
         font-size: 22px;
+        line-height: 26px;
+    }
+
+    #webform-client-form-38 {
+        display: none;
+    }
+    .wrap-copy {
+        float: none;
+        margin: 37px auto 0;
+        text-align: center;
+    }
+    .copy-box {
+        text-align: center;
+    }
+    .address:after {
+        right: 50%;
+        margin-right: -74px;
     }
 }
 

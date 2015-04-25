@@ -4,6 +4,10 @@ $(document).ready(function(){
     });
 
     $(".is-expanded").on('mouseenter', function(){
-        $(this).find('.menu').slideToggle();
+        var $this = $(this);
+
+        if($(window).width() < 768){
+            $this.find('.menu').slideToggle();
+        }
     });
 });
