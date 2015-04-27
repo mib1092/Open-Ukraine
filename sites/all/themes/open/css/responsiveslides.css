@@ -65,6 +65,12 @@
         }
 
 
+@media all and (max-width: 480px) {
+    .rslides_tabs {
+        top: -30px;
+    }
+}
+
 @media all and (min-width: 1680px) {
     .rslides li {
         max-height: 700px;

@@ -13,7 +13,7 @@
     display: block;
 
     width: 44px;
-    height: 223px;
+    height: 231px;
     padding: 0;
 
     cursor: pointer;
@@ -60,4 +60,10 @@
 }
 .slick-next .fa {
     margin-left: 4px;
+}
+
+@media all and (min-width: 1034px) {
+    .slick-next {
+        right: 13px;
+    }
 }
