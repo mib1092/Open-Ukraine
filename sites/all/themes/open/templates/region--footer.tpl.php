@@ -64,7 +64,12 @@
 
 
                         <div class="copy-box">
-                            <address class="address">Kyiv, Khreshchatyk St. 34<br>Tel.: <a href="tel:943 34 340">943 34 340</a></address>
+                            <address class="address">
+                                <?php
+                                $block = module_invoke('block', 'block_view', '2');
+                                print render($block['content']);
+                                ?>
+                            </address>
 
                             <p class="copyright">Powered by <a href="http://geekhub.ck.ua/" target="_blank" rel="nofollow">GeekHub</a></p>
                         </div>

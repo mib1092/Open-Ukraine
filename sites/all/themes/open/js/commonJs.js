@@ -29,4 +29,39 @@ $(document).ready(function(){
             }
         }
     });
+
+
+    // slick-slider controls
+    $('.slides-js').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-angle-left"></i></button>',
+        nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right"></i></button>',
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 924,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 680,
+                settings: {
+                    slidesToShow: 3
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    });
 });

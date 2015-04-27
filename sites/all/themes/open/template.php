@@ -162,7 +162,7 @@ function open_preprocess_page(&$variables, $hook) {
         drupal_add_css(drupal_get_path('theme','open') . '/css/slick.css');
         drupal_add_css(drupal_get_path('theme','open') . '/css/slick-theme.css');
 
-        drupal_add_js(drupal_get_path('theme','open') . '/js/slick.min.js',
+        drupal_add_js(drupal_get_path('theme','open') . '/js/slick.js',
             array('type' => 'file', 'scope' => 'footer', 'weight' => 3));
     }
 
