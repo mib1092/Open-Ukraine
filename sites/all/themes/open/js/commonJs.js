@@ -4,29 +4,17 @@ $(document).ready(function(){
     });
 
 
-    var flag = true;
-
     $('.is-expanded').mouseenter(function(){
-        if(flag) {
-            flag = false;
-            var $this = $(this);
+        var $this = $(this);
 
-            if($(window).width() < 925){
-                $this.children('.menu').slideToggle('slow', function() {
-                    flag = true;
-                });
-            }
+        if($(window).width() < 925){
+            $this.children('.menu').slideToggle('slow');
         }
     }).mouseleave(function(){
-        if(flag) {
-            flag = false;
-            var $this = $(this);
+        var $this = $(this);
 
-            if($(window).width() < 925){
-                $this.children('.menu').slideToggle('slow', function() {
-                    flag = true;
-                });
-            }
+        if($(window).width() < 925){
+            $this.children('.menu').slideToggle('slow');
         }
     });
 
